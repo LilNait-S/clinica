@@ -13,8 +13,8 @@ export default async function RegisterAppointment({ params }: Params) {
   if (!patient)
     return <div className="w-full h-full">El paciente no existe</div>
   return (
-    <LayerHeaderApp className="bg-neutral-100">
-      <header className="flex flex-col bg-white rounded-xl p-8 gap-4">
+    <LayerHeaderApp className="bg-border">
+      <header className="flex flex-col bg-background rounded-xl p-8 gap-4">
         <div className="flex gap-4 items-center">
           <picture className="bg-gray-100 rounded-full overflow-hidden p-4">
             <img src="/patient.png" alt="image-patient" className="size-16" />

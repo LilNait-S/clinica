@@ -13,8 +13,8 @@ export default async function Patient({ params }: Params) {
     return <div className="w-full h-full">El paciente no existe</div>
 
   return (
-    <LayerHeaderApp className="bg-neutral-100">
-      <header className="flex flex-col bg-white rounded-xl p-8 gap-4">
+    <LayerHeaderApp className="bg-border">
+      <header className="flex flex-col bg-background rounded-xl p-8 gap-4">
         <div className="flex gap-4 items-center">
           <picture className="bg-gray-100 rounded-full overflow-hidden p-4">
             <img src="/patient.png" alt="image-patient" className="size-16" />
@@ -26,7 +26,7 @@ export default async function Patient({ params }: Params) {
         </div>
         <PatientToolbar patientId={id} />
       </header>
-      <main className="bg-white rounded-xl flex gap-16 p-8">
+      <main className="bg-background rounded-xl flex gap-16 p-8">
         <div className="w-full space-y-5">
           <LabelAndValue label="Nombres Completos" value={patient.fullName} />
           <LabelAndValue label="Género" value={patient.gender} />
@@ -47,14 +47,14 @@ export default async function Patient({ params }: Params) {
       </main>
       <footer>
         <Tabs defaultValue="data">
-          <TabsList className="grid grid-cols-2 bg-neutral-100 w-fit">
+          <TabsList className="grid grid-cols-2 w-fit">
             <TabsTrigger value="data">Datos de enfermería</TabsTrigger>
             <TabsTrigger value="contact">
               Dirección y datos de contacto
             </TabsTrigger>
           </TabsList>
           <TabsContent value="data">
-            <div className="bg-white rounded-xl flex gap-16 p-8">
+            <div className="bg-background rounded-xl flex gap-16 p-8">
               <div className="w-full space-y-5">
                 <LabelAndValue
                   label="Inicio de la atención"
@@ -87,7 +87,7 @@ export default async function Patient({ params }: Params) {
             </div>
           </TabsContent>
           <TabsContent value="contact">
-            <div className="bg-white rounded-xl flex gap-16 p-8">
+            <div className="bg-background rounded-xl flex gap-16 p-8">
               <div className="w-full space-y-5"></div>
               <div className="w-full space-y-5"></div>
             </div>

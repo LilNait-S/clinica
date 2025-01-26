@@ -81,7 +81,7 @@ export function AppointmentForm({ type, patientId }: Props) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="space-y-10 bg-white rounded-xl p-8 gap-4"
+        className="space-y-10 bg-background rounded-xl p-8 gap-4"
         autoComplete="off"
       >
         <div className="flex flex-col gap-2">

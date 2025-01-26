@@ -10,7 +10,7 @@ export default async function Patients({ searchParams }: Params) {
   const search = getPatientsSchema.parse(await searchParams)
   const patients = getPatients(search)
   return (
-    <LayerHeaderApp>
+    <LayerHeaderApp className="pt-0">
       <Banner>Patients</Banner>
       <main>
         <Suspense fallback="Loading">
