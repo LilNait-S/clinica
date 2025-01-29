@@ -1,9 +1,12 @@
-import { LayerHeaderApp } from "@/components/layer-header-app"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { getPatient } from "@/lib/actions/patients"
 import { Params } from "@/types/params"
 import { LabelAndValue } from "./label-and-value"
-import { PatientToolbar } from "./toolbar"
+import { Vitals } from "./charts/vitals"
+import { PatientMenu } from "./patient-menu"
+import Link from "next/link"
+import { Button, buttonVariants } from "@/components/ui/button"
+import { ChevronLeft, Pencil } from "lucide-react"
 
 export default async function Patient({ params }: Params) {
   const { id } = await params
@@ -13,18 +16,33 @@ export default async function Patient({ params }: Params) {
     return <div className="w-full h-full">El paciente no existe</div>
 
   return (
-    <LayerHeaderApp className="bg-border">
+    <section className="flex flex-1 flex-col gap-4 p-6 bg-secondary">
       <header className="flex flex-col bg-background rounded-xl p-8 gap-4">
-        <div className="flex gap-4 items-center">
-          <picture className="bg-gray-100 rounded-full overflow-hidden p-4">
-            <img src="/patient.png" alt="image-patient" className="size-16" />
-          </picture>
-          <div className="flex flex-col">
-            <span className="font-bold text-xl">{patient.fullName}</span>
-            <span>Paciente</span>
+        <div className="flex justify-between">
+          <div className="flex gap-4 items-center">
+            <picture className="bg-white rounded-full overflow-hidden p-4">
+              <img src="/patient.png" alt="image-patient" className="size-16" />
+            </picture>
+            <div className="flex flex-col">
+              <span className="font-bold text-xl">{patient.fullName}</span>
+              <span>Paciente</span>
+            </div>
           </div>
+          <PatientMenu patientId={id} />
         </div>
-        <PatientToolbar patientId={id} />
+        <div className="flex justify-between gap-4">
+          <div className="flex gap-4">
+            <Link
+              href={"/patients"}
+              className={buttonVariants({ variant: "outline" })}
+            >
+              <ChevronLeft /> Volver a la lista
+            </Link>
+          </div>
+          <Button variant="outline">
+            <Pencil /> Editar Paciente
+          </Button>
+        </div>
       </header>
       <main className="bg-background rounded-xl flex gap-16 p-8">
         <div className="w-full space-y-5">
@@ -45,7 +63,7 @@ export default async function Patient({ params }: Params) {
           <LabelAndValue label="Religión" value={"No especificado"} />
         </div>
       </main>
-      <footer>
+      {/* <footer>
         <Tabs defaultValue="data">
           <TabsList className="grid grid-cols-2 w-fit">
             <TabsTrigger value="data">Datos de enfermería</TabsTrigger>
@@ -93,7 +111,8 @@ export default async function Patient({ params }: Params) {
             </div>
           </TabsContent>
         </Tabs>
-      </footer>
-    </LayerHeaderApp>
+      </footer> */}
+      <Vitals />
+    </section>
   )
 }
