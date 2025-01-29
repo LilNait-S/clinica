@@ -12,16 +12,9 @@ export const patientSchema = z.object({
   nationality: z.string().min(1, { message: "Nationality is required" }),
   maritalStatus: z.string().min(1, { message: "Marital status is required" }),
   occupation: z.string().optional(),
-  // emergency_contact: z
-  //   .object({
-  //     name: z.string().optional(),
-  //     relationship: z.string().optional(),
-  //     phone: z.string().optional(),
-  //   })
-  //   .optional(),
   address: z.string().min(1, { message: "Address is required" }),
   phone: z.string().optional(),
-  alternative_phone: z.string().optional(),
+  alternativePhone: z.string().optional(),
   email: z.string().email({ message: "Valid email is required" }),
   whatsapp: z.string().min(1, { message: "WhatsApp number is required" }),
 })

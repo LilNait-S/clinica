@@ -9,7 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Patient } from "@/types/patient"
+import { PatientTable } from "@/types/patient"
 import { Row } from "@tanstack/react-table"
 import { Ellipsis } from "lucide-react"
 import Link from "next/link"
@@ -19,7 +19,7 @@ interface PatientRowActionsProps<TData> {
   row: Row<TData>
 }
 
-export function PatientRowActions<TData extends Patient>({
+export function PatientRowActions<TData extends PatientTable>({
   row,
 }: PatientRowActionsProps<TData>) {
   const patient = row.original

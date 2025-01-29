@@ -5,7 +5,7 @@ import { DataTableToolbar } from "@/components/ui-custom/table-server/table-tool
 import { DataTableFilterField } from "@/components/ui-custom/table-server/types"
 import { useDataTable } from "@/hooks/use-data-table"
 import { getPatients } from "@/lib/actions/patients"
-import { Patient } from "@/types/patient"
+import { PatientTable } from "@/types/patient"
 import { patientViewTable } from "@/utils/table-view-columns/patients"
 import { use, useMemo } from "react"
 import { getPatientColumns } from "./columns"
@@ -20,7 +20,7 @@ export function PatientsTable({ patientsPromise }: PatientsTableProps) {
     payload: { data, total, pageCount },
   } = use(patientsPromise)
 
-  const filterFields: DataTableFilterField<Patient>[] = [
+  const filterFields: DataTableFilterField<PatientTable>[] = [
     { label: "buscar", value: "fullName", placeholder: "Buscar" },
   ]
 

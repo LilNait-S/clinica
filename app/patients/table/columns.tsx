@@ -1,11 +1,11 @@
 import { DataTableColumnHeader } from "@/components/ui-custom/table-server/table-column-header"
-import { Patient } from "@/types/patient"
+import { PatientTable } from "@/types/patient"
 import { ColumnDef } from "@tanstack/react-table"
 import { format } from "date-fns"
 import { PatientRowActions } from "./row-actions"
 import Link from "next/link"
 
-const parseStatus = (level: Patient["healthStatus"], id?: number) => {
+const parseStatus = (level: PatientTable["healthStatus"], id?: number) => {
   switch (level) {
     case "Excellent":
       return (
@@ -48,7 +48,7 @@ const parseStatus = (level: Patient["healthStatus"], id?: number) => {
   }
 }
 
-export function getPatientColumns(): ColumnDef<Patient>[] {
+export function getPatientColumns(): ColumnDef<PatientTable>[] {
   return [
     {
       accessorKey: "fullName",

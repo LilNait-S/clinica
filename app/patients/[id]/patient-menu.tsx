@@ -5,17 +5,19 @@ import {
   ClipboardPlusIcon,
   Download,
   HeartPulse,
-  MessageCircle,
-  UserPlus,
 } from "lucide-react"
 import Link from "next/link"
 
 export function PatientMenu({ patientId }: { patientId: string }) {
   return (
     <div className="flex flex-wrap gap-2 justify-end items-end max-w-3xl">
-      <Button variant="outline" size="sm">
-        <Clipboard /> Reporte del dia
-      </Button>
+      <Link
+        href={`${patientId}/report-day`}
+        className={buttonVariants({ size: "sm", variant: "outline" })}
+      >
+        <Clipboard />
+        Reportes del dia
+      </Link>
       <Button variant="outline" size="sm">
         <ClipboardPlusIcon /> Reportes de accidentes
       </Button>

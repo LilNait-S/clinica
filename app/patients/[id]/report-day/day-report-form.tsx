@@ -47,7 +47,7 @@ interface Props {
   type: "create" | "edit"
 }
 
-export function PatientForm({ type }: Props) {
+export function DayReportForm({ type }: Props) {
   const [submitting, setSubmitting] = useState<boolean>(false)
   const form = useForm<z.infer<typeof patientSchema>>({
     resolver: zodResolver(patientSchema),
