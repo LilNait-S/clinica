@@ -1,0 +1,99 @@
+{
+  "datos_personales": {
+    "nombre_completo": "Juan Pérez García",
+    "fecha_nacimiento": "1985-05-15",
+    "genero": "Masculino",
+    "numero_identificacion": "12345678A",
+    "nacionalidad": "Mexicana",
+    "estado_civil": "Casado",
+    "ocupacion": "Ingeniero",
+    "contacto_emergencia": {
+      "nombre": "María García",
+      "relacion": "Esposa",
+      "telefono": "+52 555 123 4567"
+    }
+  },
+  "datos_contacto": {
+    "direccion": "Calle Falsa 123, Col. Centro, Ciudad de México",
+    "telefono": "+52 555 987 6543",
+    "telefono_alternativo": "+52 555 555 5555",
+    "correo_electronico": "juan.perez@example.com",
+    "whatsapp": "+52 555 123 4567"
+  },
+  "datos_medicos_basicos": {
+    "historial_medico": ["Hipertensión", "Cirugía de apéndice (2010)"],
+    "medicamentos_actuales": ["Losartán 50mg", "Metformina 500mg"],
+    "alergias": ["Penicilina", "Mariscos"],
+    "grupo_sanguineo": "O+",
+    "vacunas": ["Influenza 2023", "COVID-19 (3 dosis)"],
+    "antecedentes_familiares": {
+      "diabetes": true,
+      "cancer": false,
+      "hipertension": true
+    }
+  },
+  "habitos_estilo_vida": {
+    "tabaco": "Exfumador",
+    "alcohol": "Ocasional",
+    "actividad_fisica": "3 veces por semana",
+    "dieta": "Equilibrada",
+    "sueño": "7 horas por noche",
+    "consumo_drogas": "Nunca"
+  },
+  "datos_clinicos": {
+    "motivo_consulta": "Dolor en el pecho",
+    "sintomas": ["Dolor opresivo", "Mareos"],
+    "signos_vitales": {
+      "presion_arterial": "120/80 mmHg",
+      "frecuencia_cardiaca": "75 lpm",
+      "temperatura": "36.5 °C"
+    },
+    "peso": "75 kg",
+    "talla": "175 cm",
+    "exploracion_fisica": "Ruidos cardíacos normales",
+    "pruebas_diagnosticas": {
+      "analisis_sangre": "Normal",
+      "radiografia_torax": "Sin hallazgos"
+    },
+    "diagnostico": "Dolor torácico no específico",
+    "tratamiento": ["Reposo", "Paracetamol 500mg cada 8 horas"]
+  },
+  "seguro_medico": {
+    "compania_seguros": "Seguros XYZ",
+    "numero_poliza": "POL123456789",
+    "tipo_cobertura": "Premium",
+    "autorizaciones": {
+      "autorizado": true,
+      "detalles": "Autorización para consulta general"
+    },
+    "historial_pagos": {
+      "ultimo_pago": "2023-10-01",
+      "monto": "500 MXN"
+    }
+  },
+  "historial_consultas": [
+    {
+      "fecha_consulta": "2023-10-01",
+      "notas_medico": "Paciente con dolor torácico, se recomienda reposo.",
+      "recetas_emitidas": ["Paracetamol 500mg"],
+      "proxima_cita": "2023-10-15"
+    },
+    {
+      "fecha_consulta": "2023-09-15",
+      "notas_medico": "Control de hipertensión, estable.",
+      "recetas_emitidas": ["Losartán 50mg"],
+      "proxima_cita": "2023-10-01"
+    }
+  ],
+  "datos_adicionales": {
+    "fotografia": "base64_encoded_image_or_url",
+    "consentimientos_firmados": [
+      {
+        "nombre_documento": "Consentimiento informado",
+        "fecha_firma": "2023-10-01"
+      }
+    ],
+    "preferencias_comunicacion": "WhatsApp",
+    "observaciones_personales": "Paciente prefiere ser contactado por las mañanas."
+  }
+}

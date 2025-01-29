@@ -18,8 +18,8 @@ import { DarkModeToggle } from "./darkmode-toggle"
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "Puercoleon",
+    email: "gordiño@gmail.com",
     avatar: "/avatars/shadcn.jpg",
   },
 }
