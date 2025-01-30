@@ -43,7 +43,7 @@ const patientReports = [
     id: 1,
     date: new Date("2025-01-29"),
     description:
-      "El paciente presenta síntomas leves de gripe, recomendación de reposo y paracetamol.",
+      "El paciente presenta síntomas leves de gripe, recomendación de reposo y paracetamol. El paciente presenta síntomas leves de gripe, recomendación de reposo y paracetamol.El paciente presenta síntomas leves de gripe, recomendación de reposo y paracetamol.El paciente presenta síntomas leves de gripe, recomendación de reposo y paracetamol.",
   },
   {
     id: 2,
