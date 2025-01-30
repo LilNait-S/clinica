@@ -12,7 +12,7 @@ export function PatientMenu({ patientId }: { patientId: string }) {
   return (
     <div className="flex flex-wrap gap-2 justify-end items-end max-w-3xl">
       <Link
-        href={`${patientId}/report-day`}
+        href={`/patients/${patientId}/report-day`}
         className={buttonVariants({ size: "sm", variant: "outline" })}
       >
         <Clipboard />
@@ -28,7 +28,7 @@ export function PatientMenu({ patientId }: { patientId: string }) {
         <Download /> Descargar ficha del paciente
       </Button>
       <Link
-        href={`${patientId}/register-appointment`}
+        href={`/patients/${patientId}/register-appointment`}
         className={buttonVariants({ size: "sm" })}
       >
         <HeartPulse />
