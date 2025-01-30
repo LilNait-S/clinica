@@ -2,6 +2,7 @@ import { Circle } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { format } from "date-fns"
 import { es } from "date-fns/locale"
+import { cn } from "@/lib/utils"
 
 export default function AppointmentSchedule() {
   return (
@@ -10,10 +11,17 @@ export default function AppointmentSchedule() {
         {patientReports.map(({ date, description, id }, index) => (
           <div key={id} className="flex gap-4 mb-6 relative">
             {index !== patientReports.length - 1 && (
-              <div className="absolute left-[11px] top-[24px] w-[2px] h-[calc(100%-8px)] bg-gray-200" />
+              <div className="absolute left-[11px] top-[24px] w-[2px] h-[calc(100%-2px)] bg-gray-200" />
             )}
             <div className="relative">
-              <Circle className="w-6 h-6 fill-blue-500 text-blue-500" />
+              <Circle
+                className={cn(
+                  "w-6 h-6",
+                  index === 0
+                    ? "fill-blue-500 text-blue-500 w-6 h-6"
+                    : "fill-gray-400 text-gray-400 size-4 mx-1"
+                )}
+              />
             </div>
             <div className="flex-1">
               <p className="text-sm text-gray-500 mb-2">
