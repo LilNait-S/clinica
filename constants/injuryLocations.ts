@@ -1,0 +1,18 @@
+export const injuryLocations = [
+  { label: "Cabeza", value: "1" },
+  { label: "Cara", value: "2" },
+  { label: "Cuello", value: "3" },
+  { label: "Hombro", value: "4" },
+  { label: "Brazo", value: "5" },
+  { label: "Codo", value: "6" },
+  { label: "Muñeca", value: "7" },
+  { label: "Mano", value: "8" },
+  { label: "Pecho", value: "9" },
+  { label: "Espalda", value: "10" },
+  { label: "Abdomen", value: "11" },
+  { label: "Cadera", value: "12" },
+  { label: "Pierna", value: "13" },
+  { label: "Rodilla", value: "14" },
+  { label: "Tobillo", value: "15" },
+  { label: "Pie", value: "16" },
+] as const

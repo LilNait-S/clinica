@@ -4,6 +4,7 @@ import { PatientMenu } from "./patient-menu"
 import Link from "next/link"
 import { Params } from "@/types/params"
 import { getPatient } from "@/lib/actions/patients"
+import { Card } from "@/components/ui/card"
 
 export default async function RootLayout({
   children,
@@ -18,7 +19,7 @@ export default async function RootLayout({
     return <div className="w-full h-full">El paciente no existe</div>
   return (
     <section className="flex flex-1 flex-col gap-4 p-6 bg-secondary">
-      <header className="flex flex-col bg-background rounded-xl p-8 gap-4">
+      <Card className="flex flex-col rounded-xl p-8 gap-4">
         <div className="flex justify-between">
           <div className="flex gap-4 items-center">
             <Link href={`/patients/${id}`} className="bg-white rounded-full overflow-hidden p-4 cursor-pointer">
@@ -43,7 +44,7 @@ export default async function RootLayout({
             <ChevronLeft /> Volver a la lista
           </Link>
         </div>
-      </header>
+      </Card>
       {children}
     </section>
   )

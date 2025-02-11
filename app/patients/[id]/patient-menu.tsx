@@ -10,7 +10,7 @@ import Link from "next/link"
 
 export function PatientMenu({ patientId }: { patientId: string }) {
   return (
-    <div className="flex flex-wrap gap-2 justify-end items-end max-w-3xl">
+    <div className="flex flex-wrap gap-2 justify-end items-end max-w-xl">
       <Link
         href={`/patients/${patientId}/report-day`}
         className={buttonVariants({ size: "sm", variant: "outline" })}
@@ -18,12 +18,19 @@ export function PatientMenu({ patientId }: { patientId: string }) {
         <Clipboard />
         Reportes del dia
       </Link>
-      <Button variant="outline" size="sm">
+      <Link
+        href={`/patients/${patientId}/register-accidents`}
+        className={buttonVariants({ size: "sm", variant: "outline" })}
+      >
+        <ClipboardPlus />
+        Registrar accidentes
+      </Link>
+      {/* <Button variant="outline" size="sm">
         <ClipboardPlusIcon /> Reportes de accidentes
       </Button>
       <Button variant="outline" size="sm">
         <ClipboardPlus /> Registrar accidentes
-      </Button>
+      </Button> */}
       <Button variant="outline" size="sm">
         <Download /> Descargar ficha del paciente
       </Button>

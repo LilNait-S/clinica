@@ -1,6 +1,6 @@
 "use client"
 
-import { Button, buttonVariants } from "@/components/ui/button"
+import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { DialogFooter } from "@/components/ui/dialog"
 import {
@@ -14,7 +14,6 @@ import {
 import { Textarea } from "@/components/ui/textarea"
 import { dayReportSchema } from "@/lib/validations/patient/day-report"
 import { zodResolver } from "@hookform/resolvers/zod"
-import Link from "next/link"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { toast } from "sonner"
@@ -89,13 +88,11 @@ export function DayReportForm({ type }: Props) {
               )}
             />
 
-            <DialogFooter className="col-span-2 mt-4">
-              <Button type="submit" disabled={submitting}>
-                {submitting
-                  ? `${type === "create" ? "Creando reporte" : "Actualizando reporte"}`
-                  : `${type === "create" ? "Crear reporte" : "Actualizar reporte"}`}
-              </Button>
-            </DialogFooter>
+            <Button type="submit" disabled={submitting}>
+              {submitting
+                ? `${type === "create" ? "Creando reporte" : "Actualizando reporte"}`
+                : `${type === "create" ? "Crear reporte" : "Actualizar reporte"}`}
+            </Button>
           </form>
         </Form>
       </CardContent>
